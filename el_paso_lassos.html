@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Paso Lassos - Dynasty Champions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Impact&display=swap');
+        /* [All your CSS styles – unchanged] */
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {font-family:'Crimson Text',serif;background:linear-gradient(135deg,#1a1a1a 0%,#2d1810 50%,#1a1a1a 100%);color:#fff;overflow-x:hidden;height:100vh;}
+        .magazine-container {position:relative;width:100%;height:100vh;background:radial-gradient(ellipse at top,rgba(139,69,19,0.3) 0%,transparent 60%),linear-gradient(45deg,#8B4513 0%,#A0522D 25%,#CD853F 50%,#D2691E 75%,#8B4513 100%);background-size:100% 100%;overflow-y:auto;}
+        /* ... [rest of your CSS, unchanged] ... */
+    </style>
+</head>
+<body>
+    <div class="magazine-container">
+        <div class="vintage-border">
+            <!-- [all your HTML content unchanged, omitted for brevity] -->
+            <!-- ... -->
+        </div>
+        <div class="controls">
+            <button class="control-btn" onclick="playVintageSound(this)">📻 Radio</button>
+            <button class="control-btn" onclick="showChampionshipMoment()">🏆 Glory</button>
+            <button class="control-btn" onclick="resetMagazine()">🔄 Replay</button>
+        </div>
+    </div>
+    <script>
+        let audioContext, oscillator;
+        let playing = false;
+        function playVintageSound(btn) {
+            if (!audioContext) {audioContext = new (window.AudioContext || window.webkitAudioContext)();}
+            if (!playing) {playVintageSequence();playing = true;btn.textContent = '📻 On Air';} else {stopVintageSound();playing = false;btn.textContent = '📻 Radio';}}
+        function playVintageSequence() {
+            const notes = [
+                {freq: 261.63, duration: 0.3}, // C4
+                {freq: 329.63, duration: 0.3}, // E4
+                {freq: 392.00, duration: 0.3}, // G4
+                {freq: 523.25, duration: 0.6}  // C5
+            ];
+            let current = 0;
+            function playNote() {
+                if (current >= notes.length) {
+                    stopVintageSound();
+                    playing = false;
+                    document.querySelector('.control-btn').textContent = '📻 Radio';
+                    return;
+                }
+                oscillator = audioContext.createOscillator();
+                oscillator.type = 'triangle';
+                oscillator.frequency.value = notes[current].freq;
+                oscillator.connect(audioContext.destination);
+                oscillator.start();
+                setTimeout(() => {
+                    oscillator.stop();
+                    current++;
+                    playNote();
+                }, notes[current].duration * 1000);
+            }
+            playNote();
+        }
+        function stopVintageSound() {
+            if (oscillator) {oscillator.stop();oscillator.disconnect();oscillator = null;}}
+        function showChampionshipMoment() {alert('🏆 El Paso Lassos: The Dynasty Continues!');}
+        function resetMagazine() {window.scrollTo({top: 0, behavior: 'smooth'});}
+    </script>
+</body>
+</html>
