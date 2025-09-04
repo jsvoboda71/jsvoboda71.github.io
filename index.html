@@ -1,36 +1,800 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome to My GitHub Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 2em;
-    }
-    .container {
-      background: #fff;
-      max-width: 600px;
-      margin: auto;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    p {
-      color: #555;
-    }
-  </style>
+<!-- saved from url=(0085)file:///C:/Users/SvobodaJ/Downloads/El%20Paso%20Lassos%20-%20Dynasty%20Champions.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Paso Lassos - Dynasty Champions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Impact&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 50%, #1a1a1a 100%);
+            color: #fff;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+        
+        .magazine-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: 
+                radial-gradient(ellipse at top, rgba(139, 69, 19, 0.3) 0%, transparent 60%),
+                linear-gradient(45deg, #8B4513 0%, #A0522D 25%, #CD853F 50%, #D2691E 75%, #8B4513 100%);
+            background-size: 100% 100%;
+            overflow-y: auto;
+        }
+        
+        .vintage-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 8px solid #DAA520;
+            border-image: linear-gradient(45deg, #FFD700, #B8860B, #DAA520, #FFD700) 1;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(2px);
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px 20px 20px;
+            background: linear-gradient(180deg, #8B0000 0%, #DC143C 50%, #8B0000 100%);
+            border-bottom: 5px solid #DAA520;
+            position: relative;
+        }
+        
+        .si-logo {
+            font-family: 'Impact', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 3px 3px 0px #000;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+        
+        .year-badge {
+            background: #DAA520;
+            color: #000;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .team-title {
+            font-family: 'Impact', sans-serif;
+            font-size: 3.5rem;
+            color: #DAA520;
+            text-shadow: 4px 4px 0px #8B4513, 6px 6px 0px #000;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 4px 4px 0px #8B4513, 6px 6px 0px #000, 0 0 20px rgba(218, 165, 32, 0.5); }
+            50% { text-shadow: 4px 4px 0px #8B4513, 6px 6px 0px #000, 0 0 40px rgba(218, 165, 32, 0.8); }
+        }
+        
+        .championship-banner {
+            background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+            color: #000;
+            padding: 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 3px solid #B8860B;
+            animation: bannerPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes bannerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .roster-section {
+            background: linear-gradient(145deg, rgba(139, 69, 19, 0.9), rgba(160, 82, 45, 0.9));
+            border: 3px solid #DAA520;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section-title {
+            font-family: 'Impact', sans-serif;
+            font-size: 2rem;
+            color: #DAA520;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 0px #000;
+            border-bottom: 3px solid #DAA520;
+            padding-bottom: 10px;
+        }
+        
+        .player-card {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(139, 69, 19, 0.8));
+            margin: 15px 0;
+            padding: 20px;
+            border: 2px solid #DAA520;
+            border-radius: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(218, 165, 32, 0.3);
+        }
+        
+        .player-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #DAA520;
+            margin-bottom: 5px;
+        }
+        
+        .player-details {
+            font-size: 1rem;
+            color: #fff;
+            line-height: 1.4;
+        }
+        
+        .star-player {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.3), rgba(255, 215, 0, 0.3));
+            border: 3px solid #FFD700;
+            animation: starGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes starGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+        }
+        
+        .stats-showcase {
+            background: linear-gradient(145deg, rgba(139, 0, 0, 0.9), rgba(220, 20, 60, 0.9));
+            border: 3px solid #DAA520;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 2px solid rgba(218, 165, 32, 0.3);
+            font-size: 1.2rem;
+        }
+        
+        .stat-label {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .stat-value {
+            color: #DAA520;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        
+        .trophy-section {
+            grid-column: 1 / -1;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(255, 215, 0, 0.2));
+            border: 5px solid #FFD700;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trophy-section::before {
+            content: '🏆';
+            position: absolute;
+            font-size: 6rem;
+            top: 20px;
+            right: 20px;
+            opacity: 0.2;
+            animation: trophyFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes trophyFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .dynasty-text {
+            font-family: 'Impact', sans-serif;
+            font-size: 3rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 0px #8B4513, 5px 5px 0px #000;
+            margin-bottom: 20px;
+            animation: dynastyPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes dynastyPulse {
+            0%, 100% { transform: scale(1) rotateX(0deg); }
+            50% { transform: scale(1.05) rotateX(2deg); }
+        }
+        
+        .vintage-quote {
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-left: 5px solid #DAA520;
+            margin: 20px 0;
+        }
+        
+        .matchup-preview {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(25, 25, 112, 0.9));
+            border: 4px solid #DAA520;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .preview-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .preview-title {
+            font-family: 'Impact', sans-serif;
+            font-size: 2.8rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 0px #8B0000, 5px 5px 0px #000;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .rivalry-subtitle {
+            font-size: 1.4rem;
+            color: #DAA520;
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        .teams-comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 30px;
+            align-items: center;
+            margin: 40px 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .team-side {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .team-logo {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        
+        .team-name {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #000;
+        }
+        
+        .team-record {
+            font-size: 1.1rem;
+            color: #DAA520;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .team-strength {
+            font-size: 1rem;
+            color: #fff;
+            opacity: 0.9;
+        }
+        
+        .vs-section {
+            text-align: center;
+        }
+        
+        .vs-text {
+            font-family: 'Impact', sans-serif;
+            font-size: 3rem;
+            color: #8B0000;
+            text-shadow: 2px 2px 0px #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .historical-note {
+            font-size: 0.9rem;
+            color: #DAA520;
+            font-weight: bold;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            white-space: nowrap;
+        }
+        
+        .key-matchups {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(139, 69, 19, 0.2));
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #DAA520;
+            margin: 30px 0;
+        }
+        
+        .matchup-title {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.8rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 0px #000;
+        }
+        
+        .position-battle {
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #DAA520;
+        }
+        
+        .position-header {
+            font-weight: bold;
+            color: #DAA520;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .player-vs {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .player-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .player-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        .player-stats {
+            font-size: 0.9rem;
+            color: #DAA520;
+            font-style: italic;
+        }
+        
+        .vs-small {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.5rem;
+            color: #8B0000;
+            text-shadow: 1px 1px 0px #FFD700;
+        }
+        
+        .expert-analysis {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(139, 0, 0, 0.8));
+            padding: 30px;
+            border-radius: 10px;
+            border: 3px solid #DAA520;
+            margin: 30px 0;
+        }
+        
+        .analysis-title {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.6rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px #000;
+        }
+        
+        .analysis-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #fff;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .prediction {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.3), rgba(255, 215, 0, 0.3));
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #FFD700;
+        }
+        
+        .prediction-header {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.3rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 0px #000;
+        }
+        
+        .prediction-score {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .winner {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #00ff00;
+            text-shadow: 1px 1px 0px #000;
+        }
+        
+        .loser {
+            font-size: 1.2rem;
+            color: #fff;
+            opacity: 0.8;
+        }
+        
+        .prediction-note {
+            font-size: 0.9rem;
+            color: #DAA520;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .control-btn {
+            background: linear-gradient(135deg, #8B4513, #DAA520);
+            border: 2px solid #FFD700;
+            color: #fff;
+            padding: 12px 18px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Crimson Text', serif;
+            font-weight: bold;
+            text-shadow: 1px 1px 0px #000;
+        }
+        
+        .control-btn:hover {
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #000;
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(180deg, rgba(139, 69, 19, 0.9), rgba(0, 0, 0, 0.9));
+            border-top: 3px solid #DAA520;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid { 
+                grid-template-columns: 1fr; 
+                padding: 20px;
+            }
+            .team-title { font-size: 2.5rem; }
+            .dynasty-text { font-size: 2rem; }
+            .vintage-border {
+                margin: 10px;
+                border-width: 4px;
+            }
+            .teams-comparison {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+            .vs-section {
+                order: 2;
+            }
+            .historical-note {
+                writing-mode: initial;
+                text-orientation: initial;
+            }
+            .player-vs {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .prediction-score {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .preview-title { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hello, world!</h1>
-    <p>This is a standalone GitHub Pages site for <b>jsvoboda71</b>.</p>
-    <p>Edit <code>index.html</code> to customize your page.</p>
-  </div>
-</body>
-</html>
+    <div class="magazine-container">
+        <div class="vintage-border">
+            <div class="header">
+                <div class="si-logo">FANTASY ILLUSTRATED</div>
+                <div class="year-badge">2025 Year in Sports Special Edition</div>
+                <h1 class="team-title">EL PASO LASSOS</h1>
+                <div class="championship-banner">🏆 DEFENDING DYNASTY CHAMPIONS 🏆</div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="roster-section">
+                    <h2 class="section-title">Championship Lineup</h2>
+                    
+                    <div class="player-card star-player">
+                        <div class="player-name">⭐ Patrick Mahomes II</div>
+                        <div class="player-details">QB • KC • The Golden Arm<br>100% Rostered • League MVP Favorite</div>
+                    </div>
+                    
+                    <div class="player-card star-player">
+                        <div class="player-name">⭐ Saquon Barkley</div>
+                        <div class="player-details">RB • PHI • The Thunder<br>100% Rostered • Elite RB1</div>
+                    </div>
+                    
+                    <div class="player-card">
+                        <div class="player-name">C. McCaffrey</div>
+                        <div class="player-details">RB • SF • The Weapon<br>Dual-Threat Superstar</div>
+                    </div>
+                    
+                    <div class="player-card">
+                        <div class="player-name">Ja'Marr Chase</div>
+                        <div class="player-details">WR • CIN • The Burner<br>Elite Deep Threat</div>
+                    </div>
+                    
+                    <div class="player-card">
+                        <div class="player-name">Garrett Wilson</div>
+                        <div class="player-details">WR • NYJ • The Rising Star<br>100% Rostered WR</div>
+                    </div>
+                    
+                    <div class="player-card">
+                        <div class="player-name">Drake London</div>
+                        <div class="player-details">WR • ATL • The Target Monster<br>Red Zone Specialist</div>
+                    </div>
+                </div>
+                
+                <div class="stats-showcase">
+                    <h2 class="section-title">Championship Stats</h2>
+                    
+                    <div class="stat-item">
+                        <span class="stat-label">Dynasty Titles:</span>
+                        <span class="stat-value">2 🏆</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <span class="stat-label">Elite Players:</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <span class="stat-label">100% Rostered:</span>
+                        <span class="stat-value">11</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <span class="stat-label">Championship DNA:</span>
+                        <span class="stat-value">PROVEN ✓</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <span class="stat-label">Repeat Potential:</span>
+                        <span class="stat-value">MAXIMUM</span>
+                    </div>
+                    
+                    <div class="vintage-quote">
+                        "Like the great dynasties of the past, El Paso Lassos combines elite talent with championship experience. This isn't just a team - it's a legacy in the making."
+                    </div>
+                <div class="vintage-quote">
+                        "Our rivals talk a big game, but against a true dynasty they’re nothing but paper tigers. They roar on draft day, they strut after a lucky win, but when the playoffs come, they crumble. No matter how fierce they look, the Lassos always cut them down."
+                    </div><div class="vintage-quote">"A new dynasty is never founded without a struggle. Blood makes good soil."</div></div>
+                
+                <div class="trophy-section">
+                    <div class="dynasty-text">DYNASTY DOMINANCE</div>
+                    <p style="font-size: 1.3rem; line-height: 1.6; color: #fff;">
+                        From the high desert plains of El Paso comes a fantasy football dynasty that has lassoed the competition. With Mahomes slinging touchdowns like a gunslinger and Saquon stampeding through defenses, this championship squad is locked and loaded for another title run.
+                    </p>
+                    <p style="font-size: 1.2rem; margin-top: 20px; color: #7C0D0E; font-weight: bold;">
+                        "Once a champion, always a champion. The Lassos ride again in 2025."
+                    </p>
+                </div>
+
+                <div class="matchup-preview">
+                    <div class="preview-header">
+                        <div class="preview-title">WEEK 1 CHAMPIONSHIP REMATCH</div>
+                        <div class="rivalry-subtitle">When Dynasties Collide</div>
+                    </div>
+                    
+                    <div class="teams-comparison">
+                        <div class="team-side lassos">
+                            <div class="team-logo">🤠</div>
+                            <div class="team-name">EL PASO LASSOS</div>
+                            <div class="team-record">Defending Champions</div>
+                            <div class="team-strength">Elite RB &amp; WR Core</div>
+                        </div>
+                        
+                        <div class="vs-section">
+                            <div class="vs-text">VS</div>
+                            <div class="historical-note">Historic Rivalry • Lassos Lead Series</div>
+                        </div>
+                        
+                        <div class="team-side youngstown">
+                            <div class="team-logo">⚡</div>
+                            <div class="team-name">YOUNGSTOWN OLD DAWGS</div>
+                            <div class="team-record">Championship Contender</div>
+                            <div class="team-strength">Balanced Attack</div>
+                        </div>
+                    </div>
+                    
+                    <div class="key-matchups">
+                        <div class="matchup-title">KEY BATTLES TO WATCH</div>
+                        
+                        <div class="position-battle">
+                            <div class="position-header">QUARTERBACK DUEL</div>
+                            <div class="player-vs">
+                                <div class="player-side">
+                                    <span class="player-name">P. Mahomes</span>
+                                    <span class="player-stats">Elite • 100% Start</span>
+<div class="player-analysis">
+                        The former Super Bowl champion and MVP returns with a chip on his shoulder. Mahomes's matchup against a potentially weaker defense sets him up as a top start for Week 1.
+                    </div>
+                                </div>
+                                <div class="vs-small">vs</div>
+                                <div class="player-side">
+                                    <span class="player-name">L. Jackson</span>
+                                    <span class="player-stats">Dual-Threat Star</span>
+<div class="player-analysis">Jackson enters 2025 with renewed focus and a chip on his shoulder. His dual-threat ability makes him a dangerous weekly starter with elite upside.
+
+</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="position-battle">
+                            <div class="position-header">RUNNING BACK SHOWDOWN</div>
+                            <div class="player-vs">
+                                <div class="player-side">
+                                    <span class="player-name">S. Barkley</span>
+                                    <span class="player-stats">Thunder &amp; Lightning</span>
+<div class="player-analysis">Can Barkley repeat the video game numbers he produced with his dynamic moves last season? He produced the top running back game of last season, with 46.2 PPR points against the Rams in Week 12, and the Cowboys were the only defense to allow 35-plus points to a running back on multiple occasions (Alvin Kamara and Joe Mixon). This makes it a spotlight game where he could go bonkers.
+</div>
+                                </div>
+                                <div class="vs-small">vs</div>
+                                <div class="player-side">
+                                    <span class="player-name">D. Henry</span>
+                                    <span class="player-stats">The King</span>
+<div class="player-analysis">"Henry was a monster in his first season in Baltimore, rushing for 1,921 yards and scoring 18 touchdowns in his age-30 season. Age and mileage suggest that Henry is a risky bet, but the man seems indestructible and impervious to age. He won't catch many passes, but Henry should once again compile big-time rushing numbers."
+
+
+</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="position-battle">
+                            <div class="position-header">RECEIVER BATTLE</div>
+                            <div class="player-vs">
+                                <div class="player-side">
+                                    <span class="player-name">J. Chase</span>
+                                    <span class="player-stats">Deep Threat Elite</span><div class="player-analysis">It might not be realistic for Chase to match the splendor of a 2024 season in which he finished with 127-1,708-17, but Chase has been a high-end WR1 since entering the league in 2021, and he has a great bond with longtime college and pro teammate Joe Burrow, one of the best pure passers in the game.
+</div>
+
+                                </div>
+                                <div class="vs-small">vs</div>
+                                <div class="player-side">
+                                    <span class="player-name">C. Lamb</span>
+                                    <span class="player-stats">Slot Merchant</span><div class="player-analysis">You can’t go wrong with any of the big three at wide receiver (Lamb, Justin Jefferson, Ja’Marr Chase), but there is a strong argument to be made that Lamb could be the overall WR1.
+
+Lamb’s setup for 2025 is pretty ideal. The Cowboys finally have a WR2 after two years of mostly nothing since trading away Amari Cooper.
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expert-analysis">
+                        <div class="analysis-title">EXPERT ANALYSIS</div>
+                        <div class="analysis-text">
+                            "This isn't just Week 1 - it's a championship preview. The El Paso Lassos have historically dominated this rivalry, and with Mahomes-to-Chase connecting like clockwork, they're built to extend that streak. But Youngstown's balanced attack with Jackson's legs and Henry's power could finally break through. The dynasty's first test arrives early."
+                        </div>
+                        <div class="prediction">
+                            <div class="prediction-header">SI PREDICTION</div>
+                            <div class="prediction-score">
+                                <span class="winner">El Paso Lassos 156</span>
+                                <span class="loser">Youngstown Old Dawgs 154</span>
+                            </div>
+                            <div class="prediction-note">"The team that has been there before wins a close matchup. More disappointment for the Dawgs."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p style="font-size: 1.1rem; color: #DAA520; font-weight: bold;">
+                    🤠 THE DYNASTY CONTINUES • GIDDYUP EL PASO! 🤠
+                </p>
+                <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">
+                    Fantasy Illustrated Fantasy Football Championship Edition • September 2025
+                </p>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" onclick="playVintageSound()">📻 Radio</button>
+            <button class="control-btn" onclick="showChampionshipMoment()">🏆 Glory</button>
+            <button class="control-btn" onclick="resetMagazine()">🔄 Replay</button>
+        </div>
+    </div>
+
+    <script>
+        let audioContext;
+        let playing = false;
+        
+        function playVintageSound() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            
+            if (!playing) {
+                // Create vintage radio-style sound
+                playVintageSequence();
+                playing = true;
+                document.querySelector('.control-btn').textContent = '📻 On Air';
+            } else {
+                stopVintageSound();
+                playing = false;
+                document.querySelector('.control-btn').textContent = '📻 Radio';
+            }
+        }
+        
+        function playVintageSequence() {
+            // 1993-style triumphant fanfare
+            const notes = [
+                {freq: 261.63, duration: 0.3}, // C4
+                {freq: 329.63, duration: 0.3}, // E4
+                {freq: 392.00, duration: 0.3}, // G4
+                {freq: 523.25, duration: 0.6}, // C5
+                {freq: </script></body></html>
